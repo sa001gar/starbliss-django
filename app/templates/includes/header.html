@@ -1,0 +1,105 @@
+{% load static %}
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm" id="header">
+    <div class="bg-gradient-to-r from-starbliss-mustard to-amber-500 text-starbliss-dark py-2 px-4 hidden md:block font-medium">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+91 7033366698</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-envelope"></i>
+                    <span>connect@starblliss.com</span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span>Align your name, numbers & destiny</span>
+                <div class="flex space-x-3">
+                    <a href="https://www.facebook.com/starblliss/" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@Starbilliss" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <nav class="max-w-7xl mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <a href="/" class="flex items-center space-x-3 group">
+                <!-- <img src="{% static 'assets/images/logo.avif' %}" alt="Starblliss Logo" class="h-12 w-auto" fetchpriority="high" /> -->
+                <div class="text-3xl font-serif font-bold text-starbliss-dark group-hover:text-starbliss-mustard transition-colors">Starblliss<span class="text-starbliss-mustard text-4xl">.</span></div>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="/" class="text-starbliss-dark hover:text-starbliss-mustard transition-colors duration-300 font-medium {% if request.path == '/' %} text-starbliss-mustard {% endif %}">Home</a>
+                <a href="/about/" class="text-starbliss-dark hover:text-starbliss-mustard transition-colors duration-300 font-medium {% if request.path == '/about/' %} text-starbliss-mustard {% endif %}">About</a>
+
+                <!-- Services Dropdown -->
+                <div class="relative group" id="services-dropdown">
+                    <a href="/services/" class="flex items-center space-x-1 text-starbliss-dark hover:text-starbliss-mustard transition-colors duration-300 font-medium">
+                        <span class="{% if request.path == '/services/' %}text-starbliss-mustard {% endif %}"> Services</span>
+                        <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </a>
+                    <div class="absolute left-0 mt-2 w-64 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 overflow-hidden z-50">
+                        <div class="py-2" id="service-categories">
+                            <a href="/services/name-correction/" class="px-4 py-3 text-sm text-starbliss-dark hover:bg-starbliss-mustard-light hover:text-starbliss-mustard transition-colors duration-300 border-b border-gray-50 flex items-center"><i class="fas fa-signature w-6 text-center mr-2 text-starbliss-mustard"></i> Name Correction</a>
+                            <a href="/services/numerology/" class="px-4 py-3 text-sm text-starbliss-dark hover:bg-starbliss-mustard-light hover:text-starbliss-mustard transition-colors duration-300 border-b border-gray-50 flex items-center"><i class="fas fa-sort-numeric-up-alt w-6 text-center mr-2 text-starbliss-green"></i> Numerology</a>
+                            <a href="/services/vastu/" class="px-4 py-3 text-sm text-starbliss-dark hover:bg-starbliss-mustard-light hover:text-starbliss-mustard transition-colors duration-300 border-b border-gray-50 flex items-center"><i class="fas fa-home w-6 text-center mr-2 text-starbliss-blue"></i> Vastu Solution</a>
+                            <a href="/services/healing/" class="px-4 py-3 text-sm text-starbliss-dark hover:bg-starbliss-mustard-light hover:text-starbliss-mustard transition-colors duration-300 flex items-center"><i class="fas fa-gem w-6 text-center mr-2 text-purple-500"></i> Crystal Healing</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/contact/" class="text-starbliss-dark hover:text-starbliss-mustard transition-colors duration-300 font-medium {% if request.path == '/contact/' %} text-starbliss-mustard {% endif %}">Contact</a>
+                <a href="/blog/" class="text-starbliss-dark hover:text-starbliss-mustard transition-colors duration-300 font-medium {% if request.path == '/blog/' %} text-starbliss-mustard {% endif %}">Blog</a>
+                <a href="/contact/" class="bg-gradient-to-r from-starbliss-mustard to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">Book Consultation</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button 
+                onclick="toggleMobileMenu()" 
+                class="lg:hidden p-2 text-starbliss-dark hover:text-starbliss-mustard transition-colors"
+                id="mobile-menu-btn"
+                aria-label="Toggle navigation menu"
+            >
+                <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+                <i class="fas fa-times text-2xl hidden" id="close-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="hidden lg:hidden mt-4 py-4 border-t border-gray-100 bg-white absolute left-0 right-0 px-4 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="/" class="text-starbliss-dark hover:text-starbliss-mustard font-medium px-4 py-2 rounded-lg hover:bg-starbliss-mustard-light" onclick="closeMobileMenu()">Home</a>
+                <a href="/about/" class="text-starbliss-dark hover:text-starbliss-mustard font-medium px-4 py-2 rounded-lg hover:bg-starbliss-mustard-light" onclick="closeMobileMenu()">About</a>
+                
+                <!-- Mobile Services Dropdown -->
+                <div class="flex flex-col">
+                    <button 
+                        onclick="toggleMobileProductsDropdown()" 
+                        class="flex items-center justify-between text-starbliss-dark hover:text-starbliss-mustard font-medium px-4 py-2 rounded-lg hover:bg-starbliss-mustard-light w-full text-left"
+                    >
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform duration-300" id="mobile-products-chevron"></i>
+                    </button>
+                    <div class="hidden flex-col pl-6 mt-2 space-y-2 border-l-2 border-starbliss-mustard/20 ml-4" id="mobile-product-categories">
+                        <a href="/services/name-correction/" class="block px-4 py-2 text-sm text-starbliss-dark hover:text-starbliss-mustard" onclick="closeMobileMenu()">Name Correction</a>
+                        <a href="/services/numerology/" class="block px-4 py-2 text-sm text-starbliss-dark hover:text-starbliss-mustard" onclick="closeMobileMenu()">Numerology</a>
+                        <a href="/services/vastu/" class="block px-4 py-2 text-sm text-starbliss-dark hover:text-starbliss-mustard" onclick="closeMobileMenu()">Vastu Solution</a>
+                        <a href="/services/healing/" class="block px-4 py-2 text-sm text-starbliss-dark hover:text-starbliss-mustard" onclick="closeMobileMenu()">Healing & Remedies</a>
+                    </div>
+                </div>
+                
+                <a href="/contact/" class="text-starbliss-dark hover:text-starbliss-mustard font-medium px-4 py-2 rounded-lg hover:bg-starbliss-mustard-light" onclick="closeMobileMenu()">Contact</a>
+                <a href="/blog/" class="text-starbliss-dark hover:text-starbliss-mustard font-medium px-4 py-2 rounded-lg hover:bg-starbliss-mustard-light" onclick="closeMobileMenu()">Blog</a>
+                <div class="pt-2">
+                    <a href="/contact/" class="bg-starbliss-mustard text-white w-full block text-center py-3 rounded-full font-bold shadow-md hover:bg-yellow-600 transition-colors" onclick="closeMobileMenu()">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+

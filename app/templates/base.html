@@ -1,0 +1,256 @@
+{% load static %}
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starblliss | Best Name Correction & Astrology in Kolkata</title>
+    <meta name="description" content="Starblliss offers expert name correction, astrology & numerology services in Kolkata. Align your name, numbers & destiny. Call 7033366698." />
+    <meta name="keywords" content="{{ seo_meta_keywords }}" />
+    <meta name="author" content="Starblliss" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Preconnect to critical domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'assets/images/favicon.ico' %}" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Starblliss | Best Name Correction & Astrology in Kolkata" />
+    <meta property="og:description" content="Starblliss offers expert name correction, astrology & numerology services in Kolkata. Align your name, numbers & destiny. Call 7033366698." />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{% static 'assets/images/logo.png' %}" />
+    <meta property="og:image:alt" content="Starblliss" />
+    
+    
+    <!-- Critical CSS inline -->
+    <style>
+      .page-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+      }
+      .page-loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .loader-spinner {
+        width: 60px;
+        height: 60px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #EAB308; /* Starblliss Mustard */
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: #EAB308; /* Starblliss Mustard */
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
+      }
+      .scroll-to-top:hover {
+        background: #CA8A04; /* Darker Mustard */
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(234, 179, 8, 0.4);
+      }
+      .scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+      .scroll-to-top i {
+        font-size: 18px;
+      }
+      .active-nav {
+        color: #EAB308 !important; /* Starblliss Mustard */
+        font-weight: 600;
+      }
+      .active-nav::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #EAB308; /* Starblliss Mustard */
+      }
+      @media (max-width: 768px) {
+        .active-nav::after {
+          display: none;
+        }
+      }
+      nav a {
+        position: relative;
+      }
+    </style>
+
+    <!-- Tailwind CSS -->
+    {% tailwind_css %}
+
+    <!-- Preload critical fonts and assets -->
+    <link rel="preload" href="{% static 'assets/css/aos.css' %}" as="style" />
+    <link rel="preload" href="{% static 'assets/js/aos.js' %}" as="script" />
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="{% static 'assets/css/base.css' %}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="{% static 'assets/css/base.css' %}" />
+    </noscript>
+    
+    <!-- Additional head content -->
+    {% block extra_head %}
+    {% endblock %}
+
+  </head>
+
+<!-- Body -->
+  <body class="bg-white text-starbliss-dark">
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-spinner"></div>
+    </div>
+
+    {% include 'includes/header.html' %}
+    <main>
+      <!-- Main Content -->
+      {% block content %}
+      {% endblock %}
+    </main>
+    {% include 'includes/footer.html' %}
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+    <link rel="stylesheet" href="{% static 'fontawesomefree/css/all.min.css' %}" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="{% static 'fontawesomefree/css/all.min.css' %}" />
+    </noscript>
+
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}" />
+    </noscript>
+
+    <!-- Optimized JavaScript -->
+    <script>
+      // Inline critical JavaScript for immediate execution
+      (function () {
+        // Page Loader
+        function hideLoader() {
+          const loader = document.getElementById('pageLoader')
+          if (loader) {
+            setTimeout(() => loader.classList.add('hidden'), 500)
+          }
+        }
+      
+        if (document.readyState === 'complete') {
+          hideLoader()
+        } else {
+          window.addEventListener('load', hideLoader)
+        }
+      
+        // Scroll to Top functionality
+        let scrollBtn
+        let ticking = false
+      
+        function updateScrollButton() {
+          if (!scrollBtn) scrollBtn = document.getElementById('scrollToTop')
+          if (scrollBtn) {
+            if (window.pageYOffset > 300) {
+              scrollBtn.classList.add('visible')
+            } else {
+              scrollBtn.classList.remove('visible')
+            }
+          }
+          ticking = false
+        }
+      
+        function onScroll() {
+          if (!ticking) {
+            requestAnimationFrame(updateScrollButton)
+            ticking = true
+          }
+        }
+      
+        window.addEventListener('scroll', onScroll, { passive: true })
+      
+        window.scrollToTop = function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+      
+        // Show loader on navigation
+        document.addEventListener(
+          'click',
+          function (e) {
+            const link = e.target.closest('a')
+            if (link && link.href && !link.href.includes('#') && link.target !== '_blank' && link.hostname === window.location.hostname) {
+              const loader = document.getElementById('pageLoader')
+              if (loader) loader.classList.remove('hidden')
+            }
+          },
+          { passive: true }
+        )
+      })()
+    </script>
+
+    <!-- Load non-critical scripts -->
+    <script src="{% static 'assets/js/aos.js' %}" defer></script>
+    <script src="{% static 'assets/js/includes/header.js' %}" defer></script>
+    <script>
+      // Initialize AOS when available
+      function initAOS() {
+        if (typeof AOS !== 'undefined') {
+          AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+          })
+        }
+      }
+      
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAOS)
+      } else {
+        initAOS()
+      }
+    </script>
+
+    {% block extra_scripts %}
+    {% endblock %}
+  </body>
+</html>

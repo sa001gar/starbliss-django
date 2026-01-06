@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  /* Colors */
+  --color-starbliss-red: #D32F2F;
+  --color-starbliss-green: #388E3C;
+  --color-starbliss-white: #FFFFFF;
+  --color-starbliss-red-light: #FFEBEE;
+  --color-starbliss-green-light: #E8F5E8;
+  --color-starbliss-gray: #F5F5F5;
+  --color-starbliss-dark: #212121;
+  --color-starbliss-mustard: #EAB308;
+  --color-starbliss-mustard-light: #FEF9C3;
+  --color-starbliss-blue: #3B82F6;
+  --color-starbliss-blue-light: #EFF6FF;
+
+  /* Shadows */
+  --shadow-premium: 0 10px 30px rgba(0,0,0,0.08);
+
+  /* Backdrop Blur */
+  --backdrop-blur-xs: 2px;
+}
+
+/* Keyframes */
+@keyframes slide-in {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation Utilities */
+@utility animate-slide-in {
+  animation: slide-in 0.5s ease-out;
+}
+
+@utility animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+@utility animate-fade-in-up {
+  animation: fade-in 0.6s ease-out;
+}
+
+@utility animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+@utility bg-pattern {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+/**
+  * A catch-all path to Django template files, JavaScript, and Python files
+  * that contain Tailwind CSS classes and will be scanned by Tailwind to generate the final CSS file.
+  *
+  * If your final CSS file is not being updated after code changes, you may want to broaden or narrow
+  * the scope of this path.
+  */
+@source "../../../**/*.{html,py,js}";

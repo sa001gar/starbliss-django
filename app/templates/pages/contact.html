@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{{ rendered_page_content|safe }}
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'assets/js/pages/contact.js' %}" defer></script>
+{% endblock %}

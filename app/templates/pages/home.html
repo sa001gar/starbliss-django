@@ -1,0 +1,315 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-starbliss-mustard-light via-white to-starbliss-blue-light pt-32 pb-24 overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-starbliss-mustard/10 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-starbliss-green/5 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 space-y-8 text-center md:text-left">
+            <div class="inline-block px-4 py-2 bg-starbliss-mustard/20 text-starbliss-dark rounded-full text-sm font-semibold tracking-wide uppercase mb-4 animate-fade-in-up">
+                <i class="fas fa-star text-starbliss-mustard mr-2"></i>Best Astrology & Name Correction in Kolkata
+            </div>
+            <h1 class="text-5xl md:text-7xl font-serif font-black text-starbliss-dark leading-tight">
+                Align Your Name.<br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-starbliss-mustard to-amber-600">Balance Your Energy.</span><br />
+                Elevate Your Life.
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto md:mx-0">
+                Welcome to Starblliss, a holistic spiritual guidance brand offering advanced Astrology, Numerology, Name Correction, and Energy Healing services. We help you align with your true destiny so life flows with clarity, success, and peace.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="tel:+917033366698" class="px-8 py-4 bg-gradient-to-r from-starbliss-mustard to-amber-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+                    <i class="fas fa-phone-alt mr-2"></i> Book Consultation
+                </a>
+                <a href="#services" class="px-8 py-4 bg-white text-starbliss-dark border-2 border-starbliss-mustard font-bold rounded-full hover:bg-starbliss-mustard-light transition-all duration-300 flex items-center justify-center">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 mt-12 md:mt-0 relative">
+            <div class="relative w-full aspect-square max-w-lg mx-auto">
+                <div class="absolute inset-0 bg-gradient-to-br from-starbliss-mustard to-starbliss-green opacity-20 rounded-full animate-pulse"></div>
+                <!-- Placeholder for Hero Image - Using a spiritual/mandala design if image not available, here represented by CSS art or icon -->
+                <div class="absolute inset-4 bg-white rounded-full flex items-center justify-center shadow-2xl">
+                     <i class="fas fa-om text-9xl text-starbliss-mustard/20"></i>
+                     <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                             <div class="w-24 h-24 mx-auto mb-4 bg-starbliss-green/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-sun text-4xl text-starbliss-mustard animate-spin-slow"></i>
+                             </div>
+                             <p class="font-serif text-2xl text-starbliss-dark italic">"Nothing in life is random"</p>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden shadow-2xl relative">
+                    <!-- Decor -->
+                     <div class="absolute inset-0 bg-gradient-to-br from-starbliss-dark to-black opacity-60 z-10"></div>
+                     <div class="absolute inset-0 flex items-center justify-center z-20 p-8 text-center">
+                         <div>
+                            <h3 class="text-3xl font-serif text-white mb-4">Holistic Approach</h3>
+                            <p class="text-gray-200">Astrology + Numerology + Energy</p>
+                         </div>
+                     </div>
+                </div>
+                <div class="absolute -bottom-8 -right-8 w-64 p-6 bg-starbliss-mustard rounded-xl shadow-xl z-30 hidden md:block">
+                    <p class="text-starbliss-dark font-bold text-lg">"We create alignment, and alignment creates results."</p>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-sm font-bold text-starbliss-green uppercase tracking-wider mb-2">About Starblliss</h2>
+                <h3 class="text-4xl font-serif font-bold text-starbliss-dark mb-6">What Makes Starblliss Different?</h3>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    At Starblliss, we believe that your name, numbers, surroundings, and brand identity all carry vibrations. When incorrectly aligned, they create easy-to-fix blockages. We blend Vedic Astrology, KP Astrology, Numerology, Vastu, Sound & Crystal Healing to deliver practical solutions.
+                </p>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="flex items-center p-4 bg-starbliss-green-light rounded-lg border border-starbliss-green/20">
+                        <i class="fas fa-check-circle text-starbliss-green text-xl mr-4"></i>
+                        <span class="font-medium text-starbliss-dark">Holistic approach (Astrology + Numerology + Energy)</span>
+                    </div>
+                    <div class="flex items-center p-4 bg-starbliss-green-light rounded-lg border border-starbliss-green/20">
+                        <i class="fas fa-check-circle text-starbliss-green text-xl mr-4"></i>
+                        <span class="font-medium text-starbliss-dark">Ethical, fear-free guidance</span>
+                    </div>
+                    <div class="flex items-center p-4 bg-starbliss-green-light rounded-lg border border-starbliss-green/20">
+                        <i class="fas fa-check-circle text-starbliss-green text-xl mr-4"></i>
+                        <span class="font-medium text-starbliss-dark">100% personalized solutions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Services Section -->
+<section id="services" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-sm font-bold text-starbliss-blue uppercase tracking-wider mb-2">Our Expertise</h2>
+            <h3 class="text-4xl font-serif font-bold text-starbliss-dark mb-4">Our Core Services</h3>
+            <p class="text-gray-600">Each service is custom-designed after deep analysis of your birth details, numbers, goals, and current challenges.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-starbliss-mustard">
+                <div class="w-14 h-14 bg-starbliss-mustard/10 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-signature text-2xl text-starbliss-mustard"></i>
+                </div>
+                <h4 class="text-xl font-bold text-starbliss-dark mb-3">Name & Identity Solutions</h4>
+                <p class="text-gray-600 mb-6 text-sm">Your name is your daily vibration. When aligned, it supports growth.</p>
+                <ul class="space-y-2 mb-6 text-sm text-gray-500">
+                    <li class="flex items-center"><i class="fas fa-angle-right text-starbliss-mustard mr-2"></i> Name Correction</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-starbliss-mustard mr-2"></i> Name Redesigning</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-starbliss-mustard mr-2"></i> Lucky Baby Name</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-starbliss-green">
+                <div class="w-14 h-14 bg-starbliss-green/10 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-sort-numeric-up-alt text-2xl text-starbliss-green"></i>
+                </div>
+                <h4 class="text-xl font-bold text-starbliss-dark mb-3">Numerology & Astrology</h4>
+                <p class="text-gray-600 mb-6 text-sm">Understand your life patterns, timing, and decisions with clarity.</p>
+                <ul class="space-y-2 mb-6 text-sm text-gray-500">
+                    <li class="flex items-center"><i class="fas fa-angle-right text-starbliss-green mr-2"></i> Numero Chart Consultation</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-starbliss-green mr-2"></i> KP Astrology Prediction</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-starbliss-green mr-2"></i> Match Making Report</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-starbliss-blue">
+                <div class="w-14 h-14 bg-starbliss-blue/10 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-home text-2xl text-starbliss-blue"></i>
+                </div>
+                <h4 class="text-xl font-bold text-starbliss-dark mb-3">Vastu & Space Energy</h4>
+                <p class="text-gray-600 mb-6 text-sm">Your space affects your success more than you think.</p>
+                <ul class="space-y-2 mb-6 text-sm text-gray-500">
+                    <li class="flex items-center"><i class="fas fa-angle-right text-starbliss-blue mr-2"></i> Vastu Solution (No demolition)</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-starbliss-blue mr-2"></i> Lucky House Number</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-starbliss-blue mr-2"></i> Lucky Car Number</li>
+                </ul>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-purple-500">
+                <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-gem text-2xl text-purple-600"></i>
+                </div>
+                <h4 class="text-xl font-bold text-starbliss-dark mb-3">Healing & Remedies</h4>
+                <p class="text-gray-600 mb-6 text-sm">Heal at the energy level—gently, safely, and naturally.</p>
+                <ul class="space-y-2 mb-6 text-sm text-gray-500">
+                    <li class="flex items-center"><i class="fas fa-angle-right text-purple-500 mr-2"></i> Crystal Healing</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-purple-500 mr-2"></i> Sound Healing Session</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-purple-500 mr-2"></i> Money Magic Remedy</li>
+                </ul>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-pink-500">
+                <div class="w-14 h-14 bg-pink-50 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-hand-holding-heart text-2xl text-pink-600"></i>
+                </div>
+                <h4 class="text-xl font-bold text-starbliss-dark mb-3">Luck Enhancement</h4>
+                <p class="text-gray-600 mb-6 text-sm">Strengthen your inner vibration and confidence.</p>
+                <ul class="space-y-2 mb-6 text-sm text-gray-500">
+                    <li class="flex items-center"><i class="fas fa-angle-right text-pink-500 mr-2"></i> Lucky Gemstone</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-pink-500 mr-2"></i> Lucky Bracelet</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-pink-500 mr-2"></i> Lucky Rudraksh</li>
+                </ul>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-amber-600">
+                <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-briefcase text-2xl text-amber-700"></i>
+                </div>
+                <h4 class="text-xl font-bold text-starbliss-dark mb-3">Business & Brand Luck</h4>
+                <p class="text-gray-600 mb-6 text-sm">Ideal for startups, rebranding, and businesses facing stagnation.</p>
+                <ul class="space-y-2 mb-6 text-sm text-gray-500">
+                    <li class="flex items-center"><i class="fas fa-angle-right text-amber-700 mr-2"></i> Business Name Suggestion</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-amber-700 mr-2"></i> Business Logo Suggestion</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-amber-700 mr-2"></i> Business Card Design</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-24 bg-starbliss-dark text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-starbliss-mustard/5"></div>
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <div class="text-center mb-16">
+             <h2 class="text-sm font-bold text-starbliss-mustard uppercase tracking-wider mb-2">Why Us?</h2>
+            <h3 class="text-4xl font-serif font-bold mb-4">Why Starblliss Works</h3>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-colors">
+                <div class="w-16 h-16 mx-auto bg-starbliss-mustard rounded-full flex items-center justify-center text-starbliss-dark text-2xl mb-6 font-bold">1</div>
+                <h4 class="text-xl font-bold mb-2">Personalized Analysis</h4>
+                <p class="text-gray-400 text-sm">No generic formulas. We look at your unique chart.</p>
+            </div>
+            <div class="text-center p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-colors">
+                <div class="w-16 h-16 mx-auto bg-starbliss-mustard rounded-full flex items-center justify-center text-starbliss-dark text-2xl mb-6 font-bold">2</div>
+                <h4 class="text-xl font-bold mb-2">Ethical & Logical</h4>
+                <p class="text-gray-400 text-sm">Vedic-based guidance with practical explanations.</p>
+            </div>
+            <div class="text-center p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-colors">
+                <div class="w-16 h-16 mx-auto bg-starbliss-mustard rounded-full flex items-center justify-center text-starbliss-dark text-2xl mb-6 font-bold">3</div>
+                <h4 class="text-xl font-bold mb-2">Clear Recommendations</h4>
+                <p class="text-gray-400 text-sm">Actionable steps, not just predictions.</p>
+            </div>
+            <div class="text-center p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-colors">
+                <div class="w-16 h-16 mx-auto bg-starbliss-mustard rounded-full flex items-center justify-center text-starbliss-dark text-2xl mb-6 font-bold">4</div>
+                <h4 class="text-xl font-bold mb-2">Trusted by Clients</h4>
+                <p class="text-gray-400 text-sm">Serving clients across India with online & offline support.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h3 class="text-4xl font-serif font-bold text-starbliss-dark mb-4">Frequently Asked Questions</h3>
+        </div>
+        
+        <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <div class="border border-gray-200 rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-starbliss-mustard-light transition-colors flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                    <span class="font-bold text-lg text-starbliss-dark">What makes Starblliss different?</span>
+                    <i class="fas fa-chevron-down text-starbliss-mustard transition-transform"></i>
+                </button>
+                <div class="hidden px-6 py-4 bg-white text-gray-600 border-t border-gray-100">
+                    We use a holistic approach—combining Astrology, Numerology, Vastu, and Healing—so solutions are complete, not fragmented.
+                </div>
+            </div>
+            <!-- FAQ 2 -->
+             <div class="border border-gray-200 rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-starbliss-mustard-light transition-colors flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                    <span class="font-bold text-lg text-starbliss-dark">Do I need to change my name legally?</span>
+                    <i class="fas fa-chevron-down text-starbliss-mustard transition-transform"></i>
+                </button>
+                <div class="hidden px-6 py-4 bg-white text-gray-600 border-t border-gray-100">
+                    No. Most corrections involve minor spelling adjustments or usage guidance. Legal change is optional and advised only if necessary.
+                </div>
+            </div>
+            <!-- FAQ 3 -->
+             <div class="border border-gray-200 rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-starbliss-mustard-light transition-colors flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                    <span class="font-bold text-lg text-starbliss-dark">Can you help with business growth?</span>
+                    <i class="fas fa-chevron-down text-starbliss-mustard transition-transform"></i>
+                </button>
+                <div class="hidden px-6 py-4 bg-white text-gray-600 border-t border-gray-100">
+                    Yes. Our Lucky Business Name, Logo & Card Suggestions are designed to align brand vibration with success and stability.
+                </div>
+            </div>
+             <!-- FAQ 4 -->
+             <div class="border border-gray-200 rounded-xl overflow-hidden">
+                <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-starbliss-mustard-light transition-colors flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                    <span class="font-bold text-lg text-starbliss-dark">How soon can I expect results?</span>
+                    <i class="fas fa-chevron-down text-starbliss-mustard transition-transform"></i>
+                </button>
+                <div class="hidden px-6 py-4 bg-white text-gray-600 border-t border-gray-100">
+                   Results vary by individual and planetary timing, but many clients notice positive shifts within weeks to 2–3 months.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-24 bg-gradient-to-r from-starbliss-mustard to-amber-500 relative overflow-hidden text-center">
+    <div class="absolute inset-0 bg-pattern opacity-10"></div>
+    <div class="max-w-4xl mx-auto px-4 relative z-10">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Begin Your Alignment Journey</h2>
+        <p class="text-xl text-white/90 mb-10">
+            If you feel stuck, confused, or energetically drained, it’s time to realign your life with the right vibration. Your transformation starts with one call.
+        </p>
+        <a href="tel:+917033366698" class="inline-block px-10 py-5 bg-white text-starbliss-mustard font-black text-lg rounded-full shadow-2xl hover:scale-105 transition-transform duration-300">
+             <i class="fas fa-phone-alt mr-2"></i> CALL 7033366698
+        </a>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    function toggleFAQ(element) {
+        const content = element.nextElementSibling;
+        const icon = element.querySelector('i');
+        
+        // Close all other FAQs
+        const allContents = document.querySelectorAll('.faq-content'); // Assuming I added class, but I didn't. Let's act on nextElementSibling
+        // Actually better to just toggle current one for simplicity
+        
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            icon.style.transform = 'rotate(180deg)';
+        } else {
+            content.classList.add('hidden');
+            icon.style.transform = 'rotate(0deg)';
+        }
+    }
+</script>
+{% endblock %}
